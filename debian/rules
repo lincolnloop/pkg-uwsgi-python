@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+# export DH_VERBOSE = 1
+
+export PYBUILD_NAME=python{version}-uwsgi
+export PYBUILD_INTERPRETERS=python{version}
+export PYBUILD_DISABLE=test
+export PYBUILD_VERSIONS=2.7 3.6
+export PYBUILD_DESTDIR_python2=debian/python2.7-uwsgi/
+export PYBUILD_DESTDIR_python3.6=debian/python3.6-uwsgi/
+export PYBUILD_AFTER_INSTALL=mv {destdir}/usr/bin/uwsgi {destdir}/usr/bin/uwsgi{version}
+
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild

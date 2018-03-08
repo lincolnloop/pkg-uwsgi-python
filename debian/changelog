@@ -1,0 +1,5 @@
+python-uwsgi (2.0.17-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 08 Mar 2018 04:55:56 +0000

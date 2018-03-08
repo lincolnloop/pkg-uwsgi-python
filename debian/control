@@ -1,0 +1,23 @@
+Source: python-uwsgi
+Section: python
+Priority: optional
+Maintainer: Peter Baumgartner <pete@lincolnloop.com>
+Build-Depends: debhelper (>=9),dh-python
+Standards-Version: 4.1.2
+Homepage: https://uwsgi-docs.readthedocs.io
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.6
+Vcs-Git: https://github.com/unbit/uwsgi.git
+Vcs-Browser: https://github.com/unbit/uwsgi
+
+Package: python3.6-uwsgi
+Architecture: any
+Depends: ${misc:Depends}, python3.6, libpython3.6, libjansson4
+Description: The uWSGI server
+  The uWSGI application server with Python3.6 and Dogstatd plugins.
+
+Package: python2.7-uwsgi
+Architecture: any
+Depends: ${misc:Depends}, python2.7, libpython2.7, libjansson4
+Description: The uWSGI server
+  The uWSGI application server with Python2.7 and Dogstatd plugins.
