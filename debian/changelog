@@ -1,4 +1,16 @@
-python-uwsgi (2.0.17-1) unstable; urgency=medium
+python-uwsgi (2.0.17-3) xenial; urgency=medium
+
+  * Packaging fixes -- PPA can't install setuptools
+
+ -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 08 Mar 2018 23:58:22 +0000
+
+python-uwsgi (2.0.17-2) xenial; urgency=medium
+
+  * Packaging fixes
+
+ -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 08 Mar 2018 23:25:25 +0000
+
+python-uwsgi (2.0.17-1) xenial; urgency=medium
 
   * Initial release.
 

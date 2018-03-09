@@ -9,8 +9,10 @@ export PYBUILD_DISABLE=test
 export PYBUILD_VERSIONS=2.7 3.6
 export PYBUILD_DESTDIR_python2=debian/python2.7-uwsgi/
 export PYBUILD_DESTDIR_python3.6=debian/python3.6-uwsgi/
+# append Python version to uWSGI binary
 export PYBUILD_AFTER_INSTALL=mv {destdir}/usr/bin/uwsgi {destdir}/usr/bin/uwsgi{version}
-
+# install setuptools, deadsnakes PPA does not provide it
+export PYTHONPATH=$(CURDIR)/setuptools_src
 
 %:
 	dh $@ --with python2,python3 --buildsystem=pybuild
