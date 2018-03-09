@@ -16,3 +16,7 @@ export PYTHONPATH=$(CURDIR)/setuptools_src
 
 %:
 	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_install_deb:
+	sed -i 's/\/usr\/lib\/python3\//\/usr\/lib\/python3.6\//' debian/python3.6-uwsgi.prerm.debhelper
+	dh_install_deb

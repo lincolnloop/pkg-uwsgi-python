@@ -1,3 +1,9 @@
+python-uwsgi (2.0.17-4) xenial; urgency=medium
+
+  * Packaging fixes for postinst and prerm
+
+ -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 08 Mar 2018 19:03:17 -0700
+
 python-uwsgi (2.0.17-3) xenial; urgency=medium
 
   * Packaging fixes -- PPA can't install setuptools

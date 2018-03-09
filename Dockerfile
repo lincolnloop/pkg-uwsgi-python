@@ -27,7 +27,7 @@ WORKDIR /uwsgi
 ADD debian /uwsgi/debian
 
 RUN set -ex && dpkg-buildpackage -us -uc && \
-    dpkg -I /python2.7-uwsgi*.deb && dpkg-deb -c /python2.7-uwsgi*.deb && \
+    dpkg -I /python2.7-uwsgi*.deb && dpkg-deb -c /python2.7-uwsgi*.deb && dpkg -i /python2.7-uwsgi*.deb && \
     echo "\n\n" && \
-    dpkg -I /python${PYTHON3_VERSION}-uwsgi*.deb && dpkg-deb -c /python${PYTHON3_VERSION}-uwsgi*.deb
+    dpkg -I /python${PYTHON3_VERSION}-uwsgi*.deb && dpkg-deb -c /python${PYTHON3_VERSION}-uwsgi*.deb && dpkg -i /python${PYTHON3_VERSION}-uwsgi*.deb
 CMD /bin/bash -c "debuild --no-tgz-check -S -sa && dput ${PPA} /python-uwsgi_*_source.changes"

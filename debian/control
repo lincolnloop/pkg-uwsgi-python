@@ -16,8 +16,8 @@ Build-Depends:
   python3.6-dev
 Standards-Version: 4.1.2
 Homepage: https://uwsgi-docs.readthedocs.io
-X-Python-Version: >= 2.7
-X-Python3-Version: >= 3.6
+X-Python-Version: 2.7
+X-Python3-Version: 3.6
 Vcs-Git: https://github.com/unbit/uwsgi.git
 Vcs-Browser: https://github.com/unbit/uwsgi
 

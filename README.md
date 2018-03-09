@@ -14,7 +14,7 @@ This will build and sign the necessary files and upload them to [the PPA](https:
 ## Releasing a new version
 
 1. Update `UWSGI_VERSION` in the `Dockerfile`.
-2. Add an entry to `debian/changelog` (`dch -i` is the easiest way to do this).
+2. Add an entry to `debian/changelog` (`dch -i` is the easiest way to do this, you can generate the time with `date +"%a, %d %b %Y %H:%m:%S %z"`).
 
 
 ---
