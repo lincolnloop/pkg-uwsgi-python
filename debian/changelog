@@ -1,3 +1,21 @@
+python-uwsgi (2.0.17-xenial0) xenial; urgency=medium
+
+  * Series specific packages
+
+ -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 31 Mar 2018 21:04:29 -0700
+
+python-uwsgi (2.0.17-6) xenial; urgency=medium
+
+  * Fix packaging
+
+ -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 31 Mar 2018 18:47:29 -0700
+
+python-uwsgi (2.0.17-5) xenial; urgency=medium
+
+  * Attempt to make same package work work for xenial
+
+ -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 31 Mar 2018 18:36:17 -0700
+
 python-uwsgi (2.0.17-4) xenial; urgency=medium
 
   * Packaging fixes for postinst and prerm

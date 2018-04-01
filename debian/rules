@@ -3,7 +3,6 @@
 # output every command that modifies files on the build system.
 # export DH_VERBOSE = 1
 
-export PYBUILD_NAME=python{version}-uwsgi
 export PYBUILD_INTERPRETERS=python{version}
 export PYBUILD_DISABLE=test
 export PYBUILD_VERSIONS=2.7 3.6
