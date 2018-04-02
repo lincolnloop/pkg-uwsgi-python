@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV PYTHON3_VERSION=3.6
 ENV PPA=ppa:lincoln-loop/uwsgi
@@ -9,7 +9,7 @@ ENV UWSGI_PKGS libpcre3-dev libssl-dev libffi-dev libjansson-dev
 ENV PYTHON_PKGS python${PYTHON3_VERSION} python${PYTHON3_VERSION}-dev python python-dev python-setuptools
 
 RUN set -ex && apt-get update && apt-get install -yq ${BUILD_PKGS} ${UWSGI_PKGS} && \
-    apt-get update && add-apt-repository ppa:deadsnakes/ppa && apt-get update && \
+    # apt-get update && add-apt-repository ppa:deadsnakes/ppa && apt-get update && \
     apt-get install -yq ${PYTHON_PKGS}
 
 ENV DOGSTATSD_VERSION=1a04f784491ab0270b4e94feb94686b65d8d2db1 UWSGI_VERSION=2.0.17 UWSGI_EMBED_PLUGINS=dogstatsd
@@ -30,4 +30,4 @@ RUN set -ex && dpkg-buildpackage -us -uc && \
     dpkg -I /python2.7-uwsgi*.deb && dpkg-deb -c /python2.7-uwsgi*.deb && dpkg -i /python2.7-uwsgi*.deb && \
     echo "\n\n" && \
     dpkg -I /python${PYTHON3_VERSION}-uwsgi*.deb && dpkg-deb -c /python${PYTHON3_VERSION}-uwsgi*.deb && dpkg -i /python${PYTHON3_VERSION}-uwsgi*.deb
-CMD /bin/bash -c "debuild --no-tgz-check -S -sa && dput ${PPA} /python-uwsgi_*_source.changes"
+CMD /bin/bash -c "gpg-agent --daemon --pinentry-program=`which pinentry-curses` && debuild --no-tgz-check -S -sa && dput ${PPA} /python-uwsgi_*_source.changes"

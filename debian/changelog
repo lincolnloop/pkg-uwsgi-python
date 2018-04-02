@@ -1,40 +1,40 @@
-python-uwsgi (2.0.17-xenial0) xenial; urgency=medium
+python-uwsgi (2.0.17-bionic0) bionic; urgency=medium
 
   * Series specific packages
 
  -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 31 Mar 2018 21:04:29 -0700
 
-python-uwsgi (2.0.17-6) xenial; urgency=medium
+python-uwsgi (2.0.17-6) bionic; urgency=medium
 
   * Fix packaging
 
  -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 31 Mar 2018 18:47:29 -0700
 
-python-uwsgi (2.0.17-5) xenial; urgency=medium
+python-uwsgi (2.0.17-5) bionic; urgency=medium
 
   * Attempt to make same package work work for xenial
 
  -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 31 Mar 2018 18:36:17 -0700
 
-python-uwsgi (2.0.17-4) xenial; urgency=medium
+python-uwsgi (2.0.17-4) bionic; urgency=medium
 
   * Packaging fixes for postinst and prerm
 
  -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 08 Mar 2018 19:03:17 -0700
 
-python-uwsgi (2.0.17-3) xenial; urgency=medium
+python-uwsgi (2.0.17-3) bionic; urgency=medium
 
   * Packaging fixes -- PPA can't install setuptools
 
  -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 08 Mar 2018 23:58:22 +0000
 
-python-uwsgi (2.0.17-2) xenial; urgency=medium
+python-uwsgi (2.0.17-2) bionic; urgency=medium
 
   * Packaging fixes
 
  -- Peter Baumgartner <pete@lincolnloop.com>  Thu, 08 Mar 2018 23:25:25 +0000
 
-python-uwsgi (2.0.17-1) xenial; urgency=medium
+python-uwsgi (2.0.17-1) bionic; urgency=medium
 
   * Initial release.
 
